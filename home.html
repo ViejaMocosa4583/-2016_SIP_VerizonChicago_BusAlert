@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <link rel="icon" type="image/png" href="TA2.png" />
+  <style>
+    body {
+      background-color: LightCyan;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: silver;
+    }
+    
+    li {
+      float: left;
+      border-right: 1px solid white;
+    }
+    
+    li a,
+    .dropbtn {
+      display: inline-block;
+      color: white;
+      text-align: right;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    li a:hover,
+    .dropdown:hover .dropbtn {
+      background-color: black;
+    }
+    
+    li.dropdown {
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 150px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    }
+    
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .active {
+      background-color: black;
+    }
+    
+    .dropdown-content a:hover {
+      background-color: silver
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    
+    h2 {
+      color: black;
+      font-family: arial;
+      font-size: 180%;
+      text-decoration: underline;
+    }
+    
+    h3 { 
+      color: black;
+      font-family: arial;
+      font-size: 160%;
+  </style>
+</head>
+
+<body background = "b2.png">
+<h1><marquee behavior="scroll" direction="right"><img src="TA.png"alt="Transit Alert"></marquee></h1>
+  <ul>
+    <li><a class="active" href="home.html">Home</a></li>
+    <li><a href="credits.html">Credits</a></li>
+    <li class="dropdown">
+      <a href="routes.html" class="dropbtn">Routes</a>
+      <div class="dropdown-content">
+      <a href="michave.html">Michigan Avenue</a>
+    </li>
+    <li><a href="contact.html">Contact</a></li>        
+    <li class="dropdown">
+    <a class="dropbtn">Settings</a>
+      <div class="dropdown-content">
+        <a href="sounds.html">Sound</a>
+        <a href="vibration.html">Vibration</a>
+      </div>
+    </li>
+  </ul>
+ <h2 style="background-color: rgba(179,179,179,.6);"><font color="white">
+  What is Transit Alert?
+  </h2></font>
+  
+  <h3 style="background-color: rgba(179,179,179,.6);"><font color="white">
+  This website was created to help people get off at their stop. 
+  What we mean by that is many things can happen on the bus;
+  you can get distracted, fall asleep, or not know where to get off.
+  This website will alert you one stop before you get off, like that 
+  you can get ready and not miss it. We created Transit Alert in a way
+  that allows you to open it through your phone's web browser. Transit Alert
+  can also be accessed mobiliy through other devices.
+  
+  </h3></font>
+  <h2 style="background-color: rgba(179,179,179,.6);"><font color="white">
+  Plans for the future
+  </h2></font>
+  <h3 style="background-color: rgba(179,179,179,.6);"><font color="white">
+  We are planning to turn our website into a app, for easier accessibility.
+  The goal is to have all have all the CTA bus routes, then go into the CTA
+  train lines. We also plan to add the Metra Train lines. Before we add any 
+  of the other train lines, we would have to find a way to get a signal in 
+  the train tunnels. For now we are taking things one step at a time, to
+  make sure that our program's foundation is the best it could be.
+  </h3></font>
+</body>
+</html>
