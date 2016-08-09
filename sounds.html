@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<body background = "b2.png">
+  <title>Settings: Sound</title>
+  <link rel="icon" type="image/png" href="TA.png" />  
+  <style>
+    body {
+      background-color: LightCyan;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: silver;
+    
+    }
+    
+    li {
+      float: left;
+      border-right: 1px solid white;
+    }
+    
+    li a,
+    .dropbtn {
+      display: inline-block;
+      color: white;
+      text-align: right;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    li a:hover,
+    .dropdown:hover .dropbtn {
+      background-color: black;
+    }
+    
+    li.dropdown {
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 150px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    }
+    
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .active {
+      background-color: black;
+    }
+    
+    .dropdown-content a:hover {
+      background-color: silver
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+	<h1><marquee behavior="scroll" direction="right"><img src="TA.png"alt="Transit Alert"></marquee></h1>
+  <ul>
+    <li><a class="active" href="home.html">Home</a></li>
+    <li><a href="credits.html">Credits</a></li>
+    <li class="dropdown">
+      <a href="routes.html" class="dropbtn">Routes</a>
+      <div class="dropdown-content">
+        <a href="michave.html">Michigan Avenue</a>
+    </li>
+    <li><a href="contact.html">Contact</a></li>        
+    <li class="dropdown">
+      <a class="dropbtn">Settings</a>
+      <div class="dropdown-content">
+        <a href="sounds.html">Sound</a>
+        <a href="vibration.html">Vibration</a>
+      </div>
+    </li>
+  </ul>
+
+<h1 style="background-color: rgba(179,179,179,.6);"><center><font color="white">Sounds</center></font></h1>
+<h2 style="background-color: rgba(179,179,179,.6);"><font color="white">Haunted House</font></h2> 
+
+<ul>
+  <li>
+  <img src="http://freepngimages.com/wp-content/uploads/2015/10/haunted-house-transparent-background.png" alt="Photo" style="width:100px;">
+<audio id="myAudio" controls>
+ <source src="hauntedhouse.mp3" type="audio/mpeg">
+</audio>   
+<script>
+var x = document.getElementById("myAudio");
+
+function set1() {
+    x.volume = 0.2;
+}
+   
+function set2() {
+    x.volume = 0.5;
+}
+
+function set3() {
+   x.volume = 0.7;
+}
+function set4() {
+	x.volume = 1.0;
+	}
+</script>
+</li></ul>
+<button onclick="set1()" type="button1" autofocus>Volume 1</button>
+<button onclick="set2()" type="button1" autofocus>Volume 2</button>
+<button onclick="set3()" type="button1" autofocus>Volume 3</button>
+<button onclick="set4()" type="button1" autofocus>Volume 4</button>
+
+
+<h2 style="background-color: rgba(179,179,179,.6);"><font color="white">Baboon</font></h2>
+<ul><li>
+<img src="https://homepages.cae.wisc.edu/~ece533/images/baboon.png" alt="image" style="width:100px;">
+<audio id="audioPlease" controls>
+ <source src="baboon.mp3" type="audio/mpeg">
+</audio>  
+<script>
+var y = document.getElementById("audioPlease");
+
+function set5() {
+    y.volume = 0.2;
+}
+   
+function set6() {
+    y.volume = 0.5;
+}
+
+function set7() {
+	y.volume = 0.7;
+}
+function set8() {
+  y.volume = 1.0;
+}
+</script>
+</li></ul>
+<button onclick="set5()" type="button2" autofocus>Volume 1</button>
+<button onclick="set6()" type="button2" autofocus>Volume 2</button>
+<button onclick="set7()" type="button2" autofocus>Volume 3</button>
+<button onclick="set8()" type="button2" autofocus>Volume 4</button>
+
+
+<h2 style="background-color: rgba(179,179,179,.6);"><font color="white">Chinese Gong</font></h2>
+<ul>
+	<li>
+	<img src="http://www.drumcenternh.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/2/12-Traditional-Gong.png" alt="Photo" style= "width:100px;">
+<audio id="audioGong" controls>
+ <source src="gong.mp3" type="audio/mpeg">
+</audio>  
+<script>
+var z = document.getElementById("audioGong");
+
+function set9() {
+    z.volume = 0.2;
+}
+   
+function set10() {
+    z.volume = 0.5;
+}
+
+function set11() {
+	z.volume = 0.7;
+}
+function set12() {
+   z.volume = 1.0;
+}
+</script>
+</li></ul>
+<button onclick="set9()"  type="button2" autofocus>Volume 1</button>
+<button onclick="set10()" type="button2" autofocus>Volume 2</button>
+<button onclick="set11()" type="button2" autofocus>Volume 3</button>
+<button onclick="set12()" type="button2" autofocus>Volume 4</button>
+
+
+<h2 style="background-color: rgba(179,179,179,.6);"><font color="white">Tornado Siren</font></h2>
+<ul><li>
+<img src="http://3.bp.blogspot.com/-34mfM1OowXY/UlNbIy-9dXI/AAAAAAAALAc/hyVvIiUoFM4/s1600/Federal+2001-DC.png" alt="Photo" style="width:100px;">
+<audio id="audioTornado" controls>
+ <source src="tornado.mp3" type="audio/mpeg">
+</audio>  
+<script>
+var t = document.getElementById("audioTornado");
+
+function set13() {
+    t.volume = 0.2;
+}
+   
+function set14() {
+    t.volume = 0.5;
+}
+
+function set15() {
+	t.volume = 0.7;
+}
+function set16() {
+   t.volume = 1.0;
+}
+</script>
+</li></ul>
+<button onclick="set13()"  type="button2" autofocus>Volume 1</button>
+<button onclick="set14()" type="button2" autofocus>Volume 2</button>
+<button onclick="set15()" type="button2" autofocus>Volume 3</button>
+<button onclick="set16()" type="button2" autofocus>Volume 4</button>
+
+
+
+</body>
+</html>

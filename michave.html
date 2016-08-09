@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Routes: Michigan Avenue</title>
+  <link rel="icon" type="image/png" href="TA.png" />  
+  <style type="text/css">
+    body {
+      background-color: LightCyan;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: silver;
+    
+    }
+    
+    p {
+      display: none;
+      color: white;
+      text-align: left;
+      padding: 14px 16px;
+      text-decoration: underline;
+    }
+    
+    li {
+      float: left;
+      border-right: 1px solid white;
+    }
+    
+    li a,
+    .dropbtn {
+      display: inline-block;
+      color: white;
+      text-align: right;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    li a:hover,
+    .dropdown:hover .dropbtn {
+      background-color: black;
+    }
+    
+    li.dropdown {
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 150px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    }
+    
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .active {
+      background-color: black;
+    }
+    
+    .dropdown-content a:hover {
+      background-color: silver
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+.columns:after {
+	content:".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.columns {height: 100%;}
+.columns{ display:inline-block;}
+.columns{ display:block; }
+
+.columns .column{
+	overflow:hidden;
+	display:inline;
+}	
+.columns .last{ float:center; }
+.columns .first{ float: left; }
+.col2 .first{ width:600px; }
+.col2 .last{ width:500px; }
+
+.col2A .first{ width:600px; }
+.col2B .last{ width: 500px; }
+  </style>
+      <meta name="viewport" content="initial-scale=1, user-scalable=no">
+      <meta charset="utf-8">
+      <title>SIMPLE POLYLINES</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin:100;
+            padding: 0;
+        }
+        #map {
+            width: 500px;
+            height: 800px;
+        }
+    </style>  
+</head>
+<body  background = "b2.png">
+	<h1><marquee behavior="scroll" direction="right"><img src="TA.png"alt="Transit Alert"></marquee></h1>
+  <ul>
+    <li><a class="active" href="home.html">Home</a></li>
+    <li><a href="credits.html">Credits</a></li>
+    <li class="dropdown">
+      <a href="routes.html" class="dropbtn">Routes</a>
+        <div class="dropdown-content">
+        <a href="michave.html">Michigan Avenue</a>
+        </div>
+    </li>
+    <li><a href="contact.html">Contact</a></li>        
+    <li class="dropdown">
+      <a  class="dropbtn">Settings</a>
+      <div class="dropdown-content">
+        <a href="sounds.html">Sound</a>
+        <a href="vibration.html">Vibration</a>
+      </div>
+    </li>
+  </ul>
+<h3 style="background-color: rgba(179,179,179,.6);"><center><font size="6" color="white">Michigan Avenue Route</font></center></h3>
+ <div class="columns col2">
+	<div class="column first">
+      <img src="146.png" alt="Bus Route">
+	</div>
+<div class="column last">
+		<div id="map">
+		</div>
+		</div>
+</div>
+</div> 
+
+
+   <select>
+  <option value="{lat: 41.978093, lng: -87.659304}"> Berwyn Red Line</option>
+  <option value="{lat: 41.961963, lng: -87.647201}">Montrose/Marine</option>
+  <option value="{lat: 41.960422, lng: -87.660575}">Irving Park/Lake Shore</option>
+  <option value="{lat: 41.940122, lng: -87.639551}">Belmont/Sheridan</option>
+  <option value="{lat: 41.899384, lng: -87.624297}">Deleware/Michigan</option>
+  <option value="{lat: 41.875721, lng: -87.627621}">Congress/State</option>
+  <option value="{lat: 41.8663, lng: -87.6068}">Adler Planetarium</option>
+</select>
+   
+    <script>
+    function initMap() {
+    var centerPoint={lat: 41.924856, lng: -87.635014};       
+		var map=new google.maps.Map(document.getElementById('map'), {
+		zoom: 12,
+		center: centerPoint,
+		mapTypeId: 'terrain',
+        });
+    var BusPlanCoordinates = [
+            {lat: 41.978093, lng: -87.659304},
+            {lat: 41.961963, lng: -87.647201},
+            {lat: 41.960422, lng: -87.660575},
+            {lat: 41.940122, lng: -87.639551},
+            {lat: 41.899384, lng: -87.624297},
+            {lat: 41.875721, lng: -87.627621},
+            {lat: 41.8663, lng: -87.6068},
+            ];
+    var BusPath = new google.maps.Polyline({
+          path: BusPlanCoordinates,
+          geodesic: true,
+          strokeColor: 'blue',
+          strokeOpacity: 1.0,
+          strokeWeight: 2
+        });
+		var myLatLng = {lat: 41.978093, lng: -87.659304};
+        var myLatLng2 = {lat: 41.978093, lng: -87.659304};
+        var myLatLng3 = {lat: 41.960422, lng: -87.660575};
+        var myLatLng4 = {lat: 41.940122, lng: -87.639551};
+        var myLatLng5 = {lat: 41.899384, lng: -87.624297};
+        var myLatLng6 = {lat: 41.875721, lng: -87.627621};
+        var myLatLng7 = {lat: 41.8663, lng: -87.6068};  
+
+  var marker = new google.maps.Marker({position: myLatLng, map: map});
+  var marker2 = new google.maps.Marker({position: myLatLng2, myLatLng2, map: map});
+  var marker3 = new google.maps.Marker({position: myLatLng3, myLatLng3, map: map});
+  var marker4 = new google.maps.Marker({position: myLatLng4, myLatLng4, map: map});
+  var marker5 = new google.maps.Marker({position: myLatLng5, myLatLng5, map: map});
+  var marker6 = new google.maps.Marker({position: myLatLng6, myLatLng6, map: map});
+  var marker7 = new google.maps.Marker({position: myLatLng7, myLatLng7, map: map});
+        BusPath.setMap(map);
+}
+</script>
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?&callback=initMap">
+</script>
+
+</body>
+</html>
+<!-- <div id="map"></div>
+<script>
+      // Note: This example requires that you consent to location sharing when
+      // prompted by your browser. If you see the error "The Geolocation service
+      // failed.", it means you probably did not give permission for the browser to
+      // locate you
+    </script>
+    <script async defer
+    src="https:maps.googleapis.com/maps/api/js?key=&callback=initMap">
+    </script>-->
+        <!-- // var centerPoint= {lat: 41.924856, lng: -87.635014}; 
+		  //var map=new global google google.maps.Map(document.getElementById('map'), {
+       //   zoom: 12,
+		  //center: centerPoint,
+       //  mapTypeId: 'terrain',
+      //  });
+        //var infoWindow = new google.maps.InfoWindow({map: map});
+
+        // Try HTML5 geolocation.
+     //if (global navigator navigator.geolocation) {
+    //     navigator.geolocation.getCurrentPosition(function(position) {
+    //       var pos = {
+    //          lat: position.coords.latitude,
+     //         lng: position.coords.longitude
+     //       };
+
+     //       infoWindow.setPosition(pos);
+     //       infoWindow.setContent('Location found.');
+     //       map.setCenter(pos);
+      //    }, function() {
+      //      handleLocationError(true, infoWindow, map.getCenter());
+     //     });
+     //  } else {
+          // Browser doesn't support Geolocation
+     //     handleLocationError(false, infoWindow, map.getCenter());
+    //    }
+
+
+     // function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+      //  infoWindow.setPosition(pos);
+      // infoWindow.setContent(browserHasGeolocation ?
+                            //  'Error: The Geolocation service failed.' :
+                            //  'Error: Your browser doesn't support geolocation.'
+                            //  );
+    //  }		-->
