@@ -1,0 +1,25 @@
+body{
+     font-family: serif; 
+     font-size: 60%; 
+     line
+     height: 1.2em; 
+     width: 80%; 
+     margin: 0;
+}
+h2{
+     font-family: serif;
+     
+}
+h3{
+     font-family: serif;
+     
+}
+<select>
+  <option value="Berwyn Red Line">  {lat: 41.978093, lng: -87.659304}</option>
+  <option value="Montrose/Marine">{lat: 41.961963, lng: -87.647201</option>
+  <option value="Irving Park/Lake Shore">{lat: 41.960422, lng: -87.660575}</option>
+  <option value="Belmont/Sheridan">{lat: 41.940122, lng: -87.639551}</option>
+  <option value="Deleware/Michigan">{lat: 41.899384, lng: -87.624297}</option>
+  <option value="Congress/State">{lat: 41.875721, lng: -87.627621}</option>
+  <option value="Adler Planetarium">{lat: 41.8663, lng: -87.6068}</option>
+</select>

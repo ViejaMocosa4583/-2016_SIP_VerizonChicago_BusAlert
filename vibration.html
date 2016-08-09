@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Settings: Vibration</title>
+  <link rel="icon" type="image/png" href="TA.png" />
+  <style>
+    body {
+      background-color: LightCyan;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: silver;
+    
+    }
+    
+    li {
+      float: left;
+      border-right: 1px solid white;
+    }
+    
+    li a,
+    .dropbtn {
+      display: inline-block;
+      color: white;
+      text-align: right;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    li a:hover,
+    .dropdown:hover .dropbtn {
+      background-color: black;
+    }
+    
+    li.dropdown {
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 150px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    }
+    
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .active {
+      background-color: black;
+    }
+    
+    .dropdown-content a:hover {
+      background-color: silver
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+
+<body background = "b2.png">
+	<h1><marquee behavior="scroll" direction="right"><img src="TA.png"alt="Transit Alert"></marquee></h1>
+  <ul>
+    <li><a class="active" href="home.html">Home</a></li>
+    <li><a href="credits.html">Credits</a></li>
+    <li class="dropdown">
+      <a href="routes.html" class="dropbtn">Routes</a>
+      <div class="dropdown-content">
+        <a href="michave.html">Michigan Avenue</a>
+    </li>
+    <li><a href="contact.html">Contact</a></li>        
+    <li class="dropdown">
+      <a class="dropbtn">Settings</a>
+      <div class="dropdown-content">
+        <a href="sounds.html">Sound</a>
+        <a href="vibration.html">Vibration</a>
+      </div>
+    </li>
+  </ul>
+</body>
+<h1 style="background-color: rgba(179,179,179,.6);"><center><font color="white">Vibration</center></font></h1>
+  <h2 style="background-color: rgba(179,179,179,.6);"><font color="white">Coming Soon to Your Mobile Browser</font></h2>
+
+<!--var successBool = window.navigator.vibrate(pattern);
+     window.navigator.vibrate(500);
+	 window.navigator.vibrate([100,30,100,30,200,30,600,30,200,30,100,200,30,100])-->
+
+</html>
